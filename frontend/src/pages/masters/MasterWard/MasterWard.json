@@ -1,0 +1,51 @@
+{
+    "title": "Ward Master",
+    "sections": [
+      {
+        "sectionTitle": "Ward Details",
+        "fields": [
+          {
+            "label": "Ward Code",
+            "type": "text",
+            "name": "wardCode",
+            "placeholder": "Enter ward code",
+            "required": true
+          },
+          {
+            "label": "Ward Name",
+            "type": "text",
+            "name": "wardName",
+            "placeholder": "Enter ward name",
+            "required": true
+          },
+          {
+            "label": "Ward Group",
+            "type": "select",
+            "name": "wardGroup",
+            "options": ["Group A", "Group B", "Group C"],
+            "placeholder": "Select ward group",
+            "required": true
+          },
+          {
+            "label": "Tariff Applicable",
+            "type": "text",
+            "name": "tariffApplicable",
+            "placeholder": "Enter tariff applicable",
+            "required": true
+          },
+          {
+            "label": "Priority",
+            "type": "radio",
+            "name": "priority",
+            "options": [
+              { "label": "High", "value": "High" },
+              { "label": "Medium", "value": "Medium" },
+              { "label": "Low", "value": "Low" }
+            ],
+            "required": true
+          }
+        ]
+      }
+    ]
+  }
+  

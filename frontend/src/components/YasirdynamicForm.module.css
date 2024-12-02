@@ -1,0 +1,204 @@
+/* Overall form container */
+.form {
+    display: grid;
+    grid-template-areas: 
+        "section1 section3"
+        "section2 section4"
+        "section5 section6";
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 92vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Plain white background */
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 20px rgba(190, 190, 190, 0.6), inset -5px -5px 20px rgba(255, 255, 255, 0.9); /* Stronger inset shadows for depth */
+    font-family: Arial, sans-serif;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+/* Form sections with Neomorphic card effect */
+.formSection {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff; /* Keeping the background white */
+    box-shadow: 10px 10px 30px rgba(180, 180, 180, 0.7), -10px -10px 30px rgba(255, 255, 255, 0.9); /* Stronger shadows for more depth */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for Neomorphic look */
+.formSection:hover {
+    transform: translateY(-8px); /* Increased hover effect */
+    box-shadow: 12px 12px 40px rgba(180, 180, 180, 0.8), -12px -12px 40px rgba(255, 255, 255, 1); /* More intense shadows */
+}
+
+/* Assign specific sections to grid areas */
+.formSection:nth-of-type(1) {
+    grid-area: section1;
+}
+
+.formSection:nth-of-type(2) {
+    grid-area: section2;
+}
+
+.formSection:nth-of-type(3) {
+    grid-area: section3;
+}
+
+.formSection:nth-of-type(4) {
+    grid-area: section4;
+}
+
+/* Section title styling */
+.sectionTitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Form title styling */
+.formTitle {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Time group flex layout */
+.timegroup {
+    display: flex;
+    justify-content: left;
+}
+
+/* Form group styling */
+.formGroup {
+    margin: 8px 0px;
+    padding: 2px 15px;
+}
+
+/* Label styling */
+.label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Input, Select, Textarea styling */
+.input,
+.select,
+.textarea {
+    background-color: #ffffff; /* Keeping the background white */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(180, 180, 180, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Prominent shadow for input fields */
+}
+
+/* Focused input, select, and textarea */
+.input:focus,
+.select:focus,
+.textarea:focus {
+    border-color: #007bff; /* Brighter border on focus */
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.6); /* Slightly larger blue shadow on focus */
+    outline: none;
+    background-color: #f1f1f1; /* Slightly different background when focused */
+    transform: scale(1.02); /* Slight zoom-in effect for focus */
+}
+
+/* Radio button group */
+.radioGroup {
+    display: flex;
+}
+
+.radioGroupContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.checkboxGroupContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.checkboxgroup {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Button styling */
+.button {
+    width: 50%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 4px 4px 12px rgba(180, 180, 180, 0.5), -4px -4px 12px rgba(255, 255, 255, 0.7); /* Stronger shadow for buttons */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Button container */
+.buttons {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Option styling */
+option {
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form {
+        grid-template-areas: 
+            "section1"
+            "section2"
+            "section3"; /* Stack all sections vertically */
+        grid-template-columns: 1fr;
+    }
+
+    .formSection {
+        padding: 15px;
+    }
+
+    .button {
+        padding: 12px;
+    }
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 10px 0;
+    font-family: 'Abhaya Libre', sans-serif;
+    text-align: left;
+    word-wrap: break-word;
+}
+

@@ -1,0 +1,78 @@
+{
+    "title": "Package Master",
+    "sections": [
+      {
+        "sectionTitle": "Package Details",
+        "fields": [
+          {
+            "field": "tariffName",
+            "label": "Tariff Name",
+            "type": "text",
+            "mandatory": true
+          },
+          {
+            "field": "package",
+            "label": "Package",
+            "type": "text",
+            "mandatory": true
+          },
+          {
+            "field": "preDays",
+            "label": "Pre Days",
+            "type": "number",
+            "mandatory": false
+          },
+          {
+            "field": "postDays",
+            "label": "Post Days",
+            "type": "number",
+            "mandatory": false
+          },
+          {
+            "field": "department",
+            "label": "Department",
+            "type": "text",
+            "mandatory": true
+          },
+          {
+            "field": "packageDesignCode",
+            "label": "Package Design Code",
+            "type": "text",
+            "mandatory": true
+          },
+          {
+            "field": "packageType",
+            "label": "Package Type",
+            "type": "select",
+            "options": ["Profile", "Standard", "Custom"],
+            "mandatory": true
+          },
+          {
+            "field": "effectFrom",
+            "label": "Effect From",
+            "type": "date",
+            "mandatory": true
+          },
+          {
+            "field": "effectTo",
+            "label": "Effect To",
+            "type": "date",
+            "mandatory": true
+          },
+          {
+            "field": "packageDuration",
+            "label": "Package Duration",
+            "type": "number",
+            "mandatory": false
+          },
+          {
+            "field": "packageAmount",
+            "label": "Package Amount",
+            "type": "number",
+            "mandatory": true
+          }
+        ]
+      }
+    ]
+  }
+  

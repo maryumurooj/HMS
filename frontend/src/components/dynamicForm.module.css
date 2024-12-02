@@ -7,31 +7,7 @@
         "section5 section6"; /* Define two wide sections (section1, section2) on the left and one tall section (section3) on the right */
     grid-template-columns: 2fr 1fr; /* Two columns: wide sections take 2fr, tall section takes 1fr */
     gap: 20px; /* Space between items */
-    width: 92vw;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    max-height: 80vh;
-    overflow-y: scroll;
-
-    /* Hide scrollbar for WebKit browsers by default */
-    &::-webkit-scrollbar {
-        width: 7px;
-        background-color: transparent; /* Makes scrollbar background transparent */
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: transparent; /* Initially make thumb transparent */
-        border-radius: 10px; /* Rounded corners for the thumb */
-    }
-
-    &:hover::-webkit-scrollbar-thumb {
-        background-color: rgba(145, 145, 145, 0.5); /* Visible on hover with transparency */
-    }
-
+    
 }
 
 .formSection {

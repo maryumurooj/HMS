@@ -1,0 +1,48 @@
+/* CSS for the Drawer */
+.MuiDrawer-root {
+    width: 240px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .MuiDrawer-paper {
+    width: 240px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Styles for Dark Mode */
+  body.dark-mode .MuiDrawer-paper {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .MuiDrawer-paper .MuiListItem-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  .MuiDrawer-paper .MuiListItem-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .MuiDrawer-paper .MuiListItem-button.active {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Icon Styling */
+  .MuiListItemIcon-root {
+    color: #333;
+  }
+  
+  body.dark-mode .MuiListItemIcon-root {
+    color: #fff;
+  }
+  
+  /* Skeleton Placeholder Styling */
+  .MuiSkeleton-root {
+    border-radius: 4px;
+  }
+  

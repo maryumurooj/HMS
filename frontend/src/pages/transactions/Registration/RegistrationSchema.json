@@ -1,0 +1,237 @@
+{
+    "title": "Inpatient Registration Form",
+    "sections": [
+      {
+        "sectionTitle": "Patient",
+        "fields": [
+          {
+            "label": "First Name",
+            "type": "text",
+            "name": "firstName",
+            "required": true
+          },
+          {
+            "label": "Last Name",
+            "type": "text",
+            "name": "lastName",
+            "required": true
+          },
+          {
+            "label": "Date of Birth",
+            "type": "date",
+            "name": "dob",
+            "required": true
+          },
+          {
+            "label": "Gender",
+            "type": "select",
+            "name": "gender",
+            "options": ["Male", "Female", "Other"],
+            "required": true
+          },
+          {
+            "label": "Contact Number",
+            "type": "text",
+            "name": "contactNumber",
+            "required": true
+          },
+          {
+            "label": "Email",
+            "type": "email",
+            "name": "email",
+            "required": false
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Address",
+        "fields": [
+          {
+            "label": "Street",
+            "type": "text",
+            "name": "street",
+            "required": true
+          },
+          {
+            "label": "City",
+            "type": "text",
+            "name": "city",
+            "required": true
+          },
+          {
+            "label": "State",
+            "type": "text",
+            "name": "state",
+            "required": true
+          },
+          {
+            "label": "Postal Code",
+            "type": "text",
+            "name": "postalCode",
+            "required": true
+           }
+        ]
+      },
+      {
+        "sectionTitle": "Patient Details",
+        "fields": [
+    
+          {
+            "label": "Guardian Name",
+            "type": "text",
+            "name": "Mother",
+            "required": true
+          },{
+            "label": "Marital Status",
+            "type": "text",
+            "name": "Status",
+            "required": true
+          },
+          {
+            "label": "Nationality",
+            "type": "text",
+            "name": "Nationality",
+            "required": true
+          },
+          {
+            "label": "Patient Type",
+            "type": "text",
+            "name": "PatientType",
+            "required": true
+          },
+          {
+            "label": "Employee",
+            "type": "text",
+            "name": "Employee",
+            "required": true
+          },
+          {
+            "label": "Remarks",
+            "type": "text",
+            "name": "remarks",
+            "required": true
+          }
+        ]
+      },
+      
+      {
+        "sectionTitle": "Emergency Contact",
+        "fields": [
+          {
+            "label": "Name",
+            "type": "text",
+            "name": "emergencyName",
+            "required": true
+          },
+          {
+            "label": "Relationship",
+            "type": "text",
+            "name": "relationship",
+            "required": true
+          },
+          {
+            "label": "Phone Number",
+            "type": "text",
+            "name": "emergencyPhone",
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Consultation Details",
+        "fields": [
+          {
+            "label": "Consultation Number",
+            "type": "Number",
+            "name": "ConlutationNumber",
+            "required": true
+          },
+          {
+            "label": "OPD Packages",
+            "type": "select",
+            "name": "Packages",
+            "options": ["Cardiology", "Neurology", "Oncology", "Orthopedics"],
+            "required": true
+          },
+          {
+            "label": "Reference",
+            "type": "text",
+            "name": "Reference",
+            "required": true
+          },
+          {
+            "label": "Payment By",
+            "type": "text",
+            "name": "PaymentBy",
+            "required": true
+          },
+          {
+            "label": "Company Name",
+            "type": "text",
+            "name": "CompanyName",
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Admission Details",
+        "fields": [
+          {
+            "label": "Admission Date & Time",
+            "type": "datetime-local",
+            "name": "admissionDateTime",
+            "required": true
+          },
+          {
+            "label": "Department",
+            "type": "select",
+            "name": "department",
+            "options": ["Cardiology", "Neurology", "Oncology", "Orthopedics"],
+            "required": true
+          },
+          {
+            "label": "Reason for Admission",
+            "type": "textarea",
+            "name": "reasonForAdmission",
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Payment Details",
+        "fields": [
+          {
+            "label": "Payment option",
+            "type": "select",
+            "name": "Paymentoption",
+            "options": ["Cardiology", "Neurology", "Oncology", "Orthopedics"],
+            "required": true
+          },
+          {
+            "label": "Consultation fee",
+            "type": "text",
+            "name": "Fee",
+            "required": true
+          },
+          {
+            "label": "Consultation Discount",
+            "type": "text",
+            "name": "Discount",
+            "required": true
+          },
+          {
+            "label": "Consultation Net amt",
+            "type": "text",
+            "name": "Amt",
+            "required": true
+          },
+          {
+            "label": "Card Number",
+            "type": "text",
+            "name": "Card Number",
+            "required": true
+          }
+        ]
+      }
+    ]
+  }

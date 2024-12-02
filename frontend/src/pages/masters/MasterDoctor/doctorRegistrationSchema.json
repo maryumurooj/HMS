@@ -1,0 +1,117 @@
+{
+    "title": "Doctor Registration",
+    "sections": [
+     
+      {
+        "sectionTitle": "Personal Details",
+        "fields": [
+          {
+            "type": "radio",
+            "name": "doctorType",
+            "label": "Doctor Type",
+            "options": [
+              { "label": "OP", "value": "OP" },
+              { "label": "IP", "value": "IP" },
+              { "label": "Both", "value": "Both" }
+            ],
+            "required": true
+          },
+          {
+            "type": "radio",
+            "name": "specialistType",
+            "label": "Specialist Type",
+            "options": [
+              { "label": "Physician", "value": "Physician" },
+              { "label": "Surgeon", "value": "Surgeon" },
+              { "label": "Both", "value": "Both" }
+            ],
+            "required": true
+          },
+          {
+            "type": "radio",
+            "name": "availability",
+            "label": "Availability",
+            "options": [
+              { "label": "Residence", "value": "Residence" },
+              { "label": "Visiting", "value": "Visiting" },
+              { "label": "Hide", "value": "Hide" }
+            ],
+            "required": true
+          },
+          { "label": "Consultant Name", "type": "text", "name": "consultantName", "placeholder": "Enter full name", "required": true },
+          { "label": "Gender", "type": "select", "name": "gender", "options": ["Male", "Female", "Other"], "required": true },
+          { "label": "Date of Birth", "type": "date", "name": "dob", "placeholder": "DD/MM/YYYY" },
+          { "label": "Languages Known", "type": "multi-select", "name": "languages", "options": ["English", "Hindi", "Telugu"] }
+        ]
+      },
+      {
+        "sectionTitle": "Professional Details",
+        "fields": [
+          { "label": "Designation", "type": "select", "name": "designation", "options": ["Consultant", "Senior Consultant", "Head of Department"] },
+          { "label": "Department", "type": "select", "name": "department", "options": ["Cardiology", "Neurology", "Orthopedics"] },
+          { "label": "Specialization", "type": "multi-select", "name": "specialization", "options": ["Surgery", "Medicine"] },
+          { "label": "Qualification", "type": "text", "name": "qualification", "placeholder": "Enter qualification" },
+          { "label": "Experience (Years)", "type": "number", "name": "experience", "placeholder": "Enter years of experience" },
+          { "label": "Registration Number", "type": "text", "name": "registrationNumber", "placeholder": "Enter registration number" },
+          { "label": "Medical License Document", "type": "file", "name": "medicalLicense" },
+          { "label": "Associated Hospitals", "type": "select", "name": "hospitals", "options": ["Hospital 1", "Hospital 2"] }
+        ]
+      },
+      {
+        "sectionTitle": "Address",
+        "fields": [
+          { "label": "City", "type": "text", "name": "city", "placeholder": "Enter city" },
+          { "label": "State", "type": "select", "name": "state", "options": ["State 1", "State 2", "State 3"] },
+          { "label": "Country", "type": "select", "name": "country", "options": ["India", "USA", "UK"] },
+          { "label": "PIN/ZIP Code", "type": "text", "name": "postalCode", "placeholder": "Enter postal code" },
+          { "label": "Address", "type": "textarea", "name": "address", "placeholder": "Enter address" }
+        ]
+      },
+      {
+        "sectionTitle": "Financial Details",
+        "fields": [
+          { "label": "Normal Consultation Fee", "type": "number", "name": "consultationFee", "placeholder": "Enter normal consultation fee" },
+          { "label": "Emergency Consultation Fee", "type": "number", "name": "emergencyFee", "placeholder": "Enter emergency consultation fee" },
+          { "label": "Revisit Fee", "type": "number", "name": "revisitFee", "placeholder": "Enter revisit fee" },
+          { "label": "Bank Name", "type": "text", "name": "bankName", "placeholder": "Enter bank name" },
+          { "label": "Branch", "type": "text", "name": "branch", "placeholder": "Enter branch name" },
+          { "label": "Account Number", "type": "number", "name": "accountNumber", "placeholder": "Enter account number" },
+          { "label": "IFSC Code", "type": "text", "name": "ifscCode", "placeholder": "Enter IFSC code" }
+        ]
+      },
+      
+      
+      
+      {
+        "sectionTitle": "Employment Details",
+        "fields": [
+          { "label": "Employment Type", "type": "select", "name": "employmentType", "options": ["Full-Time", "Part-Time"] },
+          { "label": "Start Timings", "type": "time", "name": "workTimings" },
+          { "label": "End Timings", "type": "time", "name": "workTimings" },
+          { "label": "Consultation Type", "type": "checkbox-group", "name": "consultationType", "options": ["Online", "In-Person"] },
+          { "label": "Residence Status", "type": "select", "name": "residenceStatus", "options": ["Local", "Outstation"] },
+          { "label": "Date of Joining", "type": "date", "name": "joiningDate", "placeholder": "DD/MM/YYYY" },
+          { "label": "Active Status", "type": "checkbox", "name": "activeStatus" }
+        ]
+      },
+      {
+        "sectionTitle": "Contact Details",
+        "fields": [
+          
+          { "label": "Mobile Number", "type": "text", "name": "mobile", "placeholder": "Enter mobile number" },
+          { "label": "Email Address", "type": "email", "name": "email", "placeholder": "Enter email address" },
+          { "label": "Emergency Contact Name", "type": "text", "name": "emergencyContactName", "placeholder": "Enter emergency contact name" },
+          { "label": "Emergency Contact Number", "type": "text", "name": "emergencyContactNumber", "placeholder": "Enter emergency contact number" }
+          ]
+      },
+      
+      {
+        "sectionTitle": "Additional Information",
+        "fields": [
+          { "label": "Remarks", "type": "textarea", "name": "remarks", "placeholder": "Enter remarks" },
+          { "label": "Documents (Certificates)", "type": "file", "name": "documents" },
+          { "label": "Notes", "type": "textarea", "name": "notes", "placeholder": "Enter notes" }
+        ]
+      }
+    ]
+  }

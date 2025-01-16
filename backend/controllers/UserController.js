@@ -1,3 +1,4 @@
+//Controllers/UserContrillor.js
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -107,6 +108,50 @@ class UserController {
       res.status(500).json({ message: 'Server error', error: error.message });
     }
   }
+
+  static async validateToken(req, res) {
+    try {
+      const token = req.body.token;
+      if (!token) {
+        return res.status(401).json({ message: 'Token is required' });
+      }
+
+      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'fallback_secret');
+      if (!decoded) {
+        return res.status(401).json({ message: 'Invalid token' });
+      }
+
+      res.json({ isValid: true });
+    } catch (error) {
+      console.error('Token validation error:', error);
+      res.status(500).json({ message: 'Server error' });
+    }
+  }
+
+  static async getUserRole(req, res) {
+    try {
+      const token = req.body.token;
+      if (!token) {
+        return res.status(401).json({ message: 'Token is required' });
+      }
+
+      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'fallback_secret');
+      if (!decoded) {
+        return res.status(401).json({ message: 'Invalid token' });
+      }
+
+      const user = await User.findByPk(decoded.id);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+
+      res.json({ role: user.role });
+    } catch (error) {
+      console.error('User role retrieval error:', error);
+      res.status(500).json({ message: 'Server error' });
+    }
+  }
 }
 
 module.exports = UserController;
+

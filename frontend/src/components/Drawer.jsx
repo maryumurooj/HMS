@@ -2,6 +2,11 @@ import React from 'react';
 import { Drawer as MUIDrawer, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import SettingsIcon from '@mui/icons-material/Settings';
+import RegisterIcon from '@mui/icons-material/HowToReg';
+import LocalHospital from '@mui/icons-material/LocalHospital';
+import TripOrigin from '@mui/icons-material/TripOrigin';
+import BedroomChildIcon from '@mui/icons-material/BedroomChild';
+import BiotechIcon from '@mui/icons-material/Biotech';
 import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
@@ -18,27 +23,27 @@ const NAVIGATION = [
   {
     segment: 'Registration',
     title: 'Registration',
-    icon: <SettingsIcon />,
+    icon: <RegisterIcon />,
   },
   {
     segment: 'DoctorMaster',
     title: 'DoctorMaster',
-    icon: <SettingsIcon />,
+    icon: <LocalHospital />,
   },
   {
     segment: 'DepartmentMaster',
     title: 'DepartmentMaster',
-    icon: <SettingsIcon />,
+    icon: <TripOrigin />,
   },
   {
     segment: 'WardtMaster',
     title: 'WardMaster',
-    icon: <SettingsIcon />,
+    icon: <BedroomChildIcon />,
   },
   {
     segment: 'PackageMaster',
     title: 'PackageMaster',
-    icon: <SettingsIcon />,
+    icon: <BiotechIcon />,
   },
 ];
 

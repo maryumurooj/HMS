@@ -1,63 +1,62 @@
-'use strict';
+// models/Patient.js
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
+const User = require('./User');
 
-module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('patients', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      user_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'users',
-          key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
-      },
-      name: {
-        type: Sequelize.STRING(100),
-        allowNull: false
-      },
-      date_of_birth: {
-        type: Sequelize.DATEONLY,
-        allowNull: false
-      },
-      contact_number: {
-        type: Sequelize.STRING(20),
-        allowNull: false
-      },
-      address: {
-        type: Sequelize.TEXT,
-        allowNull: true
-      },
-      medical_history: {
-        type: Sequelize.TEXT,
-        allowNull: true
-      },
-      blood_type: {
-        type: Sequelize.ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'),
-        allowNull: true
-      },
-      gender: {
-        type: Sequelize.ENUM('Male', 'Female', 'Other'),
-        allowNull: false
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
-    });
+const Patient = sequelize.define('Patient', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
   },
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('patients');
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Users', // Make sure this matches your table name
+      key: 'id'
+    }
+  },
+  name: {
+    type: DataTypes.STRING(100),
+    allowNull: false
+  },
+  date_of_birth: {
+    type: DataTypes.DATEONLY,
+    allowNull: true
+  },
+  contact_number: {
+    type: DataTypes.STRING(20),
+    allowNull: true
+  },
+  address: {
+    type: DataTypes.TEXT,
+    allowNull: true
+  },
+  medical_history: {
+    type: DataTypes.TEXT,
+    allowNull: true
+  },
+  blood_type: {
+    type: DataTypes.STRING(5),
+    allowNull: true
+  },
+  gender: {
+    type: DataTypes.ENUM('Male', 'Female', 'Other'),
+    allowNull: true
+  },
+  createdAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW
   }
-};
+
+}, {
+  tableName: 'patients', // Ensure this matches your actual table name
+  timestamps: false
+});
+
+module.exports = Patient;

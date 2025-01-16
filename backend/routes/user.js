@@ -1,3 +1,4 @@
+//routes/user.js
 const express = require('express');
 const router = express.Router();
 const UserController = require('../controllers/UserController');
@@ -29,5 +30,14 @@ router.get(
   authMiddleware, 
   asyncHandler(UserController.getProfile)
 );
+
+
+// routes/user.js
+router.post('/validate-token', UserController.validateToken);
+// routes/user.js
+router.post('/get-user-role', UserController.getUserRole);
+
+
+
 
 module.exports = router;

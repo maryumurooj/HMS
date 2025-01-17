@@ -1,49 +1,135 @@
 {
-    "title": "Department Master",
-    "sections": [
-      {
-        "sectionTitle": "Department Details",
-        "gridArea": "section1",
-        "fields": [
-          { "label": "Department Cd.", "type": "text", "name": "departmentCd", "placeholder": "Enter Department Code" },
-          { "label": "Department Name", "type": "text", "name": "departmentName", "placeholder": "Enter Department Name" },
-          { "label": "Medical", "type": "checkbox", "name": "medical" },
-          { "label": "Medical Options", "type": "select", "name": "medicalOptions", "options": ["Option 1", "Option 2", "Option 3"], "condition": { "name": "medical", "value": true } },
-          { "label": "Incharge Cd.", "type": "text", "name": "inchargeCd", "placeholder": "Enter Incharge Code" },
-          { "label": "Contact No. 1", "type": "text", "name": "contactNo1", "placeholder": "Enter Contact Number 1" },
-          { "label": "Contact No. 2", "type": "text", "name": "contactNo2", "placeholder": "Enter Contact Number 2" },
-          { "label": "CostCenterCd", "type": "select", "name": "costCenterCd", "options": ["Center 1", "Center 2", "Center 3"] },
-          { "label": "Department No", "type": "number", "name": "departmentNo", "placeholder": "Enter Department Number" },
-          { "label": "S1", "type": "text", "name": "s1", "placeholder": "Enter S1" },
-          { "label": "S2", "type": "text", "name": "s2", "placeholder": "Enter S2" },
-          { "label": "GST No", "type": "text", "name": "gstNo", "placeholder": "Enter GST Number" },
-          { "label": "Service Tax Required", "type": "checkbox", "name": "serviceTaxRequired" },
-          { "label": "Service Tax Exempted", "type": "checkbox", "name": "serviceTaxExempted" },
-          { "label": "Tax.Temp", "type": "text", "name": "taxTemp", "placeholder": "Enter Tax Temp" },
-          { "label": "Active", "type": "checkbox", "name": "active" }
-        ]
-      },
-      {
-        "sectionTitle": "DOS Print Settings",
-        "gridArea": "section3",
-        "fields": [
-          {
-            "type": "radio-group",
-            "name": "printSetting",
-            "label": "Print Setting",
-            "options": [
-              { "label": "Department Wise", "value": "departmentWise" },
-              { "label": "Service Group Wise", "value": "serviceGroupWise" },
-              { "label": "Service Wise", "value": "serviceWise" }
-            ]
-          },
-          { "label": "Show Pending Investigations", "type": "checkbox", "name": "showPendingInvestigations" },
-          { "label": "Show DoneByDoctor2 Field", "type": "checkbox", "name": "showDoneByDoctor2Field" },
-          { "label": "Is Pediatric", "type": "checkbox", "name": "isPediatric" },
-          { "label": "Show Treated Ward", "type": "checkbox", "name": "showTreatedWard" },
-          { "label": "Show Blood Bank Indents", "type": "checkbox", "name": "showBloodBankIndents" }
-        ]
-      }
-    ]
-  }
-  
+  "title": "Department Master",
+  "sections": [
+    {
+      "sectionTitle": "Department Details",
+      "gridArea": "section1",
+      "fields": [
+        {
+          "label": "Department Code",
+          "type": "text",
+          "name": "departmentCd",
+          "placeholder": "Enter Department Code",
+          "required": true
+        },
+        {
+          "label": "Department Name",
+          "type": "text",
+          "name": "departmentName",
+          "placeholder": "Enter Department Name",
+          "required": true
+        },
+        { "label": "Medical", "type": "checkbox", "name": "medical" },
+        {
+          "label": "Medical Options",
+          "type": "select",
+          "name": "medicalOptions",
+          "options": ["Option 1", "Option 2", "Option 3"],
+          "condition": { "name": "medical", "value": true }
+        },
+        {
+          "label": "Incharge Cd.",
+          "type": "text",
+          "name": "inchargeCd",
+          "placeholder": "Enter Incharge Code"
+        },
+        {
+          "label": "Contact No. 1",
+          "type": "text",
+          "name": "contactNo1",
+          "placeholder": "Enter Contact Number 1"
+        },
+        {
+          "label": "Contact No. 2",
+          "type": "text",
+          "name": "contactNo2",
+          "placeholder": "Enter Contact Number 2"
+        },
+        {
+          "label": "CostCenterCd",
+          "type": "select",
+          "name": "costCenterCd",
+          "options": ["Center 1", "Center 2", "Center 3"]
+        },
+        {
+          "label": "Department No",
+          "type": "number",
+          "name": "departmentNo",
+          "placeholder": "Enter Department Number"
+        },
+        {
+          "label": "S1",
+          "type": "text",
+          "name": "s1",
+          "placeholder": "Enter S1"
+        },
+        {
+          "label": "S2",
+          "type": "text",
+          "name": "s2",
+          "placeholder": "Enter S2"
+        },
+        {
+          "label": "GST No",
+          "type": "text",
+          "name": "gstNo",
+          "placeholder": "Enter GST Number"
+        },
+        {
+          "label": "Service Tax Required",
+          "type": "checkbox",
+          "name": "serviceTaxRequired"
+        },
+        {
+          "label": "Service Tax Exempted",
+          "type": "checkbox",
+          "name": "serviceTaxExempted"
+        },
+        {
+          "label": "Tax.Temp",
+          "type": "text",
+          "name": "taxTemp",
+          "placeholder": "Enter Tax Temp"
+        },
+        { "label": "Active", "type": "checkbox", "name": "active" }
+      ]
+    },
+    {
+      "sectionTitle": "DOS Print Settings",
+      "gridArea": "section3",
+      "fields": [
+        {
+          "type": "radio-group",
+          "name": "printSetting",
+          "label": "Print Setting",
+          "options": [
+            { "label": "Department Wise", "value": "departmentWise" },
+            { "label": "Service Group Wise", "value": "serviceGroupWise" },
+            { "label": "Service Wise", "value": "serviceWise" }
+          ]
+        },
+        {
+          "label": "Show Pending Investigations",
+          "type": "checkbox",
+          "name": "showPendingInvestigations"
+        },
+        {
+          "label": "Show DoneByDoctor2 Field",
+          "type": "checkbox",
+          "name": "showDoneByDoctor2Field"
+        },
+        { "label": "Is Pediatric", "type": "checkbox", "name": "isPediatric" },
+        {
+          "label": "Show Treated Ward",
+          "type": "checkbox",
+          "name": "showTreatedWard"
+        },
+        {
+          "label": "Show Blood Bank Indents",
+          "type": "checkbox",
+          "name": "showBloodBankIndents"
+        }
+      ]
+    }
+  ]
+}

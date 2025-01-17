@@ -10,7 +10,7 @@ import WardtMaster from '../pages/masters/MasterWard/wardMaster';
 import PackageMaster from '../pages/masters/MasterPackage/masterPackage';
 import Signin from '../pages/signin';
 import Signup from '../pages/signup';
-import ProtectedRoute from '../components/ProtectedRoute';
+import ProtectedRoute from './ProtectedRoute.jsx';
 
 const AppRoutes = () => {
   return (

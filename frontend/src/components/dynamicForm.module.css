@@ -1,187 +1,25 @@
-/* Overall form container */
 .form {
-    display: grid;
-    grid-template-areas: 
-        "section1 section3"
-        "section2 section4"
-        "section5 section6"; /* Define two wide sections (section1, section2) on the left and one tall section (section3) on the right */
-    grid-template-columns: 2fr 1fr; /* Two columns: wide sections take 2fr, tall section takes 1fr */
-    gap: 20px; /* Space between items */
-    
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.formSection {
-    padding: 0px ;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.formGroup {
+  margin-bottom: 16px;
 }
 
-.formSection:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+.checkboxGroupContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
 }
 
-/* Assign specific sections to grid areas */
-.formSection:nth-of-type(1) {
-    grid-area: section1; /* Top-left wide card */
+.fileInput {
+  margin-top: 8px;
 }
 
-.formSection:nth-of-type(2) {
-    grid-area: section2; /* Bottom-left wide card */
+.buttons {
+  margin-top: 24px;
 }
-
-.formSection:nth-of-type(3) {
-    grid-area: section3; /* Tall card */
-}  
-
-.formSection:nth-of-type(4) {
-    grid-area: section4; /* Tall card */
-}  
-.formSection:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Section title styling */
-  .sectionTitle {
-    
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 15px;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  .sectionTitleContainer{
-    background-color: #f0f0f0;
-  }
-  
-  .formTitle{color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 5px;
-
-  }
-  .timegroup{
-    display: flex;
-    justify-content: left;
-  }
-
- 
-  /* Form group styling */
-  .formGroup {
-    margin: 8px 0px;
-    padding: 2px 15px;
-  }
-  
-  .label {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #555;
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  
-  .input,
-  .select,
-  .textarea {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .textarea{
-    min-height: 150px ;
-  }
-  ::placeholder {
-    color: #555;
-  }
-
-  option{
-    color: #555;
-  }
-  
-  .input:focus,
-  .select:focus,
-  .textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-    background-color: #a7a7a7;
-  }
-
-  .radioGroup{
-    display: flex;
-  }
-  .radioGroupContainer{
-    display: flex;
-    gap: 20px;
-  }
-  .checkboxGroupContainer{
-    display: flex;
-    gap: 20px;
-
-  }
-  
-  .checkboxgroup{
-    display: flex;
-  align-items: center;
-justify-content: left;  }
-  /* Button styling */
-  .button {
-    width: 50%;
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-    transform: scale(1.02);
-  }
-  
-  .buttons{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  option{
-    color: #555;
-  }
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .form {
-        grid-template-areas: 
-            "section1"
-            "section2"
-            "section3"; /* Stack all sections vertically */
-        grid-template-columns: 1fr;
-    }
-    .formSection {
-      padding: 15px;
-    }
-  
-    .button {
-      padding: 12px;
-    }
-  }
   

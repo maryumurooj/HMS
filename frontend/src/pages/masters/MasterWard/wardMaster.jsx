@@ -1,18 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import WardData from "./MasterWard.json";
-import DynamicForm from "../../../components/dynamicForm";
-import styles from "../master.module.css"
+import DynamicForm from "../../../components/YasirdynamicForm";
+import { Paper, Snackbar, Alert } from "@mui/material";
 
 const WardMaster = () => {
+  const [alert, setAlert] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
+
   const handleFormSubmit = (formData) => {
-    console.log("Submitted Data:", formData);
-    // Handle the form submission logic here
+    try {
+      console.log("Submitted Data:", formData);
+      setAlert({
+        open: true,
+        message: "Ward saved successfully!",
+        severity: "success",
+      });
+    } catch (error) {
+      setAlert({
+        open: true,
+        message: error.message || "Error saving ward",
+        severity: "error",
+      });
+    }
+  };
+
+  const handleCloseAlert = () => {
+    setAlert((prev) => ({ ...prev, open: false }));
   };
 
   return (
-    <div className={styles.form}>
-      <DynamicForm formSchema={WardData} onSubmit={handleFormSubmit} />
-    </div>
+    <Paper elevation={3} variant="outlined" sx={{ minWidth: "90dvw", maxHeight: "90dvh", margin: "0 auto", padding: "10px" }}>
+      <DynamicForm
+        formSchema={WardData}
+        onSubmit={handleFormSubmit}
+      />
+      <Snackbar
+        open={alert.open}
+        autoHideDuration={6000}
+        onClose={handleCloseAlert}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Alert
+          onClose={handleCloseAlert}
+          severity={alert.severity}
+          sx={{ width: "100%" }}
+        >
+          {alert.message}
+        </Alert>
+      </Snackbar>
+    </Paper>
   );
 };
 
